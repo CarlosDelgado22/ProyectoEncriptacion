@@ -17,3 +17,16 @@ let productos = [];
 let proveedor = [];
 let cliente = [];
 let tecnico = [];
+
+//Clave secreta para el servidor
+const claveSecreta = `MiClave$1234`;
+
+//CIFRADO:Convierte datos a texto cigrado en Base64
+function CifrarDatos(data,clave) { //Creamos una funcion y le damos los parametros 
+    const texto = JSON.stringify(data); //convierte el objeto a string
+    let encriptado = ``;
+    for (let i = 0; i < texto.length; i++) {
+         encriptado += String.fromCharCode(texto.charCodeAt(i) ^ clave.charCodeAt(i % clave.length));     
+    }
+    return btoa(encriptado); //Codifica en Base64 para que sea texto válido
+}
