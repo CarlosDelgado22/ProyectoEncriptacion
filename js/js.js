@@ -11,3 +11,9 @@ let tipPro = [
     {id_tipPro: 2, nom_tipPro: `Hogar`},
     {id_tipPro: 3, nom_tipPro: `Cuidado Personal`}
 ];
+
+//Variables globales mutables 
+let productos = [];
+let proveedor = [];
+let cliente = [];
+let tecnico = [];
